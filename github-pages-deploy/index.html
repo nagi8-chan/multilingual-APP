@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品安装指南应用 - 界面预览</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .preview-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 350px;
+            transition: transform 0.3s ease;
+        }
+        .preview-card:hover {
+            transform: translateY(-5px);
+        }
+        .preview-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        }
+        .preview-content {
+            padding: 20px;
+        }
+        .preview-image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+        }
+        .preview-description {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        pre {
+            background-color: #f5f5f5;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .language-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .language-btn.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .language-content {
+            display: none;
+        }
+        .language-content.active {
+            display: block;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #007bff;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>产品安装指南应用 - 界面预览</h1>
+    
+    <div class="language-selector">
+        <button class="language-btn active" onclick="changeLanguage('zh')">中文</button>
+        <button class="language-btn" onclick="changeLanguage('en')">English</button>
+        <button class="language-btn" onclick="changeLanguage('ja')">日本語</button>
+    </div>
+    
+    <div id="zh-content" class="language-content active">
+        <p>产品安装指南应用是一款专为用户提供产品安装教程的应用，包含详细的视频和图文步骤说明。以下是应用的主要界面预览：</p>
+        
+        <div class="preview-container">
+            <div class="preview-card">
+                <div class="preview-header">首页/产品目录</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=首页预览" class="preview-image" alt="首页预览">
+                    <div class="preview-description">
+                        <p>首页展示了所有可用的产品型号，用户可以通过分类筛选或搜索来快速找到所需产品。</p>
+                        <ul class="feature-list">
+                            <li>产品分类导航</li>
+                            <li>产品卡片网格展示</li>
+                            <li>搜索栏</li>
+                            <li>底部导航栏</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">产品详情页</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=产品详情页预览" class="preview-image" alt="产品详情页预览">
+                    <div class="preview-description">
+                        <p>产品详情页展示了产品的基本信息、安装视频和详细的安装步骤。</p>
+                        <ul class="feature-list">
+                            <li>产品图片轮播</li>
+                            <li>产品基本信息</li>
+                            <li>安装视频播放器</li>
+                            <li>安装步骤图文说明</li>
+                            <li>常见问题解答</li>
+                            <li>收藏按钮</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">收藏页面</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=收藏页面预览" class="preview-image" alt="收藏页面预览">
+                    <div class="preview-description">
+                        <p>收藏页面显示用户收藏的所有产品，方便快速访问。</p>
+                        <ul class="feature-list">
+                            <li>已收藏产品列表</li>
+                            <li>快速访问功能</li>
+                            <li>移除收藏功能</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">设置页面</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=设置页面预览" class="preview-image" alt="设置页面预览">
+                    <div class="preview-description">
+                        <p>设置页面允许用户自定义应用的各种选项。</p>
+                        <ul class="feature-list">
+                            <li>用户偏好设置</li>
+                            <li>通知设置</li>
+                            <li>语言选择</li>
+                            <li>关于应用</li>
+                            <li>联系支持</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="en-content" class="language-content">
+        <p>Product Installation Guide App is an application designed to provide users with product installation tutorials, including detailed video and step-by-step instructions. Here are the main interface previews:</p>
+        
+        <div class="preview-container">
+            <div class="preview-card">
+                <div class="preview-header">Home/Product Catalog</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=Home+Preview" class="preview-image" alt="Home Preview">
+                    <div class="preview-description">
+                        <p>The home page displays all available product models, allowing users to quickly find the desired product through category filtering or search.</p>
+                        <ul class="feature-list">
+                            <li>Product category navigation</li>
+                            <li>Product card grid display</li>
+                            <li>Search bar</li>
+                            <li>Bottom navigation bar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">Product Detail Page</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=Product+Detail+Preview" class="preview-image" alt="Product Detail Preview">
+                    <div class="preview-description">
+                        <p>The product detail page displays the product's basic information, installation video, and detailed installation steps.</p>
+                        <ul class="feature-list">
+                            <li>Product image carousel</li>
+                            <li>Product basic information</li>
+                            <li>Installation video player</li>
+                            <li>Step-by-step installation guide</li>
+                            <li>FAQ section</li>
+                            <li>Favorite button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">Favorites Page</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=Favorites+Preview" class="preview-image" alt="Favorites Preview">
+                    <div class="preview-description">
+                        <p>The favorites page displays all products saved by the user for quick access.</p>
+                        <ul class="feature-list">
+                            <li>Favorited product list</li>
+                            <li>Quick access functionality</li>
+                            <li>Remove from favorites option</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">Settings Page</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=Settings+Preview" class="preview-image" alt="Settings Preview">
+                    <div class="preview-description">
+                        <p>The settings page allows users to customize various options in the application.</p>
+                        <ul class="feature-list">
+                            <li>User preferences</li>
+                            <li>Notification settings</li>
+                            <li>Language selection</li>
+                            <li>About the app</li>
+                            <li>Contact support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="ja-content" class="language-content">
+        <p>製品設置ガイドアプリは、詳細なビデオとステップバイステップの説明を含む製品設置チュートリアルをユーザーに提供するために設計されたアプリケーションです。以下は主なインターフェースのプレビューです：</p>
+        
+        <div class="preview-container">
+            <div class="preview-card">
+                <div class="preview-header">ホーム/製品カタログ</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=ホームプレビュー" class="preview-image" alt="ホームプレビュー">
+                    <div class="preview-description">
+                        <p>ホームページには、利用可能なすべての製品モデルが表示され、カテゴリフィルタリングや検索を通じて、ユーザーが必要な製品をすぐに見つけることができます。</p>
+                        <ul class="feature-list">
+                            <li>製品カテゴリナビゲーション</li>
+                            <li>製品カードグリッド表示</li>
+                            <li>検索バー</li>
+                            <li>ボトムナビゲーションバー</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">製品詳細ページ</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=製品詳細プレビュー" class="preview-image" alt="製品詳細プレビュー">
+                    <div class="preview-description">
+                        <p>製品詳細ページには、製品の基本情報、設置ビデオ、詳細な設置手順が表示されます。</p>
+                        <ul class="feature-list">
+                            <li>製品画像カルーセル</li>
+                            <li>製品基本情報</li>
+                            <li>設置ビデオプレーヤー</li>
+                            <li>ステップバイステップの設置ガイド</li>
+                            <li>よくある質問セクション</li>
+                            <li>お気に入りボタン</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">お気に入りページ</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=お気に入りプレビュー" class="preview-image" alt="お気に入りプレビュー">
+                    <div class="preview-description">
+                        <p>お気に入りページには、ユーザーが保存したすべての製品が表示され、素早くアクセスできます。</p>
+                        <ul class="feature-list">
+                            <li>お気に入り製品リスト</li>
+                            <li>クイックアクセス機能</li>
+                            <li>お気に入りから削除オプション</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-card">
+                <div class="preview-header">設定ページ</div>
+                <div class="preview-content">
+                    <img src="https://via.placeholder.com/350x500/f0f0f0/333333?text=設定プレビュー" class="preview-image" alt="設定プレビュー">
+                    <div class="preview-description">
+                        <p>設定ページでは、ユーザーがアプリケーションのさまざまなオプションをカスタマイズできます。</p>
+                        <ul class="feature-list">
+                            <li>ユーザー設定</li>
+                            <li>通知設定</li>
+                            <li>言語選択</li>
+                            <li>アプリについて</li>
+                            <li>サポートへの連絡</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function changeLanguage(lang) {
+            // Hide all language content
+            document.querySelectorAll('.language-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById(lang + '-content').classList.add('active');
+            
+            // Update button styles
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Find the button for the selected language and make it active
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                if (btn.textContent === '中文' && lang === 'zh' ||
+                    btn.textContent === 'English' && lang === 'en' ||
+                    btn.textContent === '日本語' && lang === 'ja') {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
